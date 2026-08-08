@@ -90,9 +90,9 @@ async def extract_footprint(target, download_photo=True):
 🆔 Telegram ID: {entity.id}
 👤 Ім'я: {entity.first_name or ''} {entity.last_name or ''}
 🏷️ Username: @{entity.username if entity.username else 'N/A'}
-📞 Телефон: {entity.phone if entity.phone else 'Приховано / Немає даних'}
+📞 Телефон: {entity.phone if entity.phone else 'Не повернуто поточній сесії'}
 📝 Bio: {full_user.full_user.about if full_user.full_user.about else 'Відсутнє'}
-🌐 Дата-центр (DC): {entity.photo.dc_id if entity.photo else 'N/A'}
+🖼️ Profile Photo DC: {entity.photo.dc_id if entity.photo else 'N/A'}
 🤖 Статус бота: {'Так' if entity.bot else 'Ні'}
 ⚠️ Позначки ризику (Scam/Fake): {'ТАК!' if entity.scam or entity.fake else 'Ні'}
 💬 Спільних чатів виявлено: {len(common_chats.chats)}
